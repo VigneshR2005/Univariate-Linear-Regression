@@ -16,27 +16,40 @@ To implement univariate Linear Regression to fit a straight line using least squ
 ## Program
 ``` python
  
-Program for Univariate linear regression using the least squares method.
-Developed by: ADHITHYA.M.R
-RegisterNumber: 22002941
+'''
+ Program for Univariat linear regression
+ using the least squere method
+ Developed By : Adhithya M R
+ Register Number:22002941
+'''
 import numpy as np
+# Preprocessing Input data
 X = np.array(eval(input()))
 Y = np.array(eval(input()))
+
+# Building the model 
 X_mean=np.mean(X)
 Y_mean=np.mean(Y)
-numer=0
+
+num=0
 denom=0
+
 for i in range(len(X)):
-    numer+=(X[i]-X_mean)*(Y[i]-Y_mean)
+    num+=(X[i]-X_mean)*(Y[i]-Y_mean)
     denom+=(X[i]-X_mean)**2
-m=numer/denom
-c=Y_mean-(m*X_mean)
-Y_pred=(m*X)+c
+
+m=num/denom
+c=Y_mean-m*X_mean
+
 print (m, c)
+
+#Predict the output
+Y_pred=m*X+c
 print (Y_pred)
+
 import matplotlib.pyplot as plt
-plt.scatter(X,Y,color = 'yellow')
-plt.plot(X,Y_pred,color = 'black')
+plt.scatter(X,Y,color = 'blue')
+plt.plot(X,Y_pred,color = 'red')
 plt.title('xv=y')
 plt.show()
 ```
@@ -45,7 +58,8 @@ plt.show()
 </br>![OUTPUT](./input22.jpg)
 </br>![output](./reg1.png)
 </br>![output](./reg2.png)
-</br>![output](./ll.png)
+</br>![output](./![WhatsApp Image 2023-01-26 at 09 42 54](https://user-images.githubusercontent.com/118834761/214759252-106f26c2-7e29-4e81-9e5f-b308db76bfd8.jpeg)
+)
 
 ## Result
 Thus the univariate Linear Regression was implemented to fit a straight line using least squares.
